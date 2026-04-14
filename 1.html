@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introdução</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Georgia, serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .imagem-contextual {
+      margin: 20px 0;
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .imagem-contextual img {
+      max-width: 100%;
+      border-radius: 12px;
+      opacity: 0.95;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    .legenda {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 5px;
+    }
+
+    #conteudo {
+      animation: fadeIn 1.5s ease;
+    }
+
+    #btnAudio {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 30px;
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    .btn-sumario {
+      display: block;
+      margin: 40px auto;
+      padding: 12px 20px;
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Prefácio</h1>
+
+  <div class="imagem-contextual">
+    <img src="logo-prefacio.png" alt="Reflexão sobre fé e dúvida">
+    <div class="legenda">
+      Entre a dúvida e a certeza, existe um território silencioso.
+    </div>
+  </div>
+
+  <div id="conteudo">
+
+    <p>Se você chegou até aqui, existe algo que precisa ser dito antes de qualquer argumento, antes de qualquer defesa, antes de qualquer tentativa de convencimento.</p>
+
+    <p>Este livro não foi escrito para quem já crê.</p>
+
+    <p>Também não foi escrito para quem já decidiu que nunca crerá.</p>
+
+    <p>Ele foi escrito para aquele ponto silencioso entre essas duas posições — o lugar onde as perguntas ainda não morreram, mas também não encontram resposta suficiente para descansar.</p>
+
+    <p>Talvez você se identifique como alguém racional. Talvez já tenha decidido que a fé, como é apresentada, não satisfaz a sua necessidade de evidência. Ou talvez apenas tenha se acostumado a viver sem se aprofundar nisso.</p>
+
+    <p><strong>E se a sua descrença não for tão neutra quanto você imagina?</strong></p>
+
+    <p>Este não é um livro contra você. Mas também não é um livro que vai te poupar.</p>
+
+    <p>Porque a proposta aqui não é vencer um debate — é expor um conflito que, em muitos casos, já existe dentro de você, ainda que silencioso.</p>
+
+    <p>Você pode continuar lendo como quem observa de fora. Mas, em algum momento, vai perceber que não está mais apenas lendo.</p>
+
+    <p><strong>Está sendo confrontado.</strong></p>
+
+    <p>E, a partir desse ponto, não será mais possível dizer que nunca considerou.</p>
+
+    <p><strong>O que você fará com isso?</strong></p>
+
+  </div>
+
+  <button id="btnAudio" onclick="toggleAudio()">▶ Ouvir</button>
+
+  <button class="btn-sumario" onclick="irSumario()">Ir para o Sumário</button>
+
+  <script>
+    let falando = false;
+    let utterance;
+
+    function toggleAudio() {
+      const btn = document.getElementById("btnAudio");
+      const texto = document.getElementById("conteudo").innerText;
+
+      if (!falando) {
+        utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = "pt-BR";
+
+        utterance.onend = () => {
+          falando = false;
+          btn.innerText = "▶ Ouvir";
+        };
+
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utterance);
+
+        falando = true;
+        btn.innerText = "⏹ Parar";
+
+      } else {
+        speechSynthesis.cancel();
+        falando = false;
+        btn.innerText = "▶ Ouvir";
+      }
+    }
+
+    function irSumario() {
+      window.location.href = "2.html";
+    }
+  </script>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>

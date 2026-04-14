@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carinhosamente Proibido a Ateus e Agnósticos</title>
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Cor da barra -->
+  <meta name="theme-color" content="#000000">
+
+  <!-- Ícones -->
+  <link rel="icon" href="logo-192.png">
+  <link rel="apple-touch-icon" href="logo-512.png">
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Capa clicável -->
+  <img src="logo-512.png" alt="Capa do Livro"
+       onclick="entrarApp()">
+
+  <script>
+    function entrarApp() {
+      window.location.href = "1.html";
+    }
+
+    // Registro do Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+
+</body>
+</html>
