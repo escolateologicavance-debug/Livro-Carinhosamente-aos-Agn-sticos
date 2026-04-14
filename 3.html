@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capítulo 1</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 30px 20px;
+      font-family: Georgia, serif;
+      background: #ffffff;
+      color: #111;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 30px;
+      font-weight: normal;
+    }
+
+    /* Número gigante */
+    .capitulo-numero {
+      float: left;
+      font-size: 120px;
+      line-height: 0.8;
+      font-weight: bold;
+      margin-right: 15px;
+      color: #ccc;
+    }
+
+    p {
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+
+    #btnAudio {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 30px;
+      background: #111;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-voltar {
+      display: block;
+      margin: 40px auto;
+      padding: 10px 18px;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Prometa que você não procura só comodismo no Agnosticismo</h1>
+
+  <div id="conteudo">
+
+    <p>
+      <span class="capitulo-numero">1</span>
+      O agnosticismo é uma posição filosófica que assume uma postura neutra quanto à existência de Deus. Segundo essa perspectiva, a existência ou não de Deus (ou deuses) é desconhecida ou incognoscível. O agnóstico não nega a possibilidade de uma divindade, mas afirma não haver evidências suficientes para confirmar ou negar sua existência. É, portanto, uma visão que valoriza a dúvida.
+    </p>
+
+    <p>
+      As bases fundamentais da salvação em Jesus confrontam diretamente esse posicionamento, pois se opõem à dúvida como estado permanente. Nesse sentido, uma pessoa agnóstica pode ser definida como alguém que não possui convicção sobre Jesus e Sua obra redentora. Se a base do agnosticismo é a dúvida, é necessário compreender que ela funciona como uma espécie de bolha que limita a percepção de Deus e de Sua existência.
+    </p>
+
+    <p>
+      A dúvida se opõe à certeza. Convicção significa estar livre de dúvidas. Para muitos, a certeza é apenas um aspecto interno das crenças. Já a verdade exige correspondência com a realidade. Para o cristão, a existência de Deus não é apenas uma ideia — é a própria personificação da verdade.
+    </p>
+
+    <p>
+      Mas afinal, o que é a verdade? O dicionário a define como aquilo que corresponde aos fatos. Para o cristão, porém, a verdade é uma pessoa: Jesus. Em João 14:6, Ele afirma: “Eu sou o caminho, a verdade e a vida”. No hebraico, a palavra verdade é “EMET” (אמת). Curiosamente, ao retirar a primeira letra (Álef), resta “MET” (מת), que significa morte. Ou seja, sem a verdade, há morte. Com a verdade, há vida.
+    </p>
+
+    <p>
+      E como se pode ter certeza da existência de Deus? Por meio da fé. Em Hebreus 11:1 está escrito: “A fé é o firme fundamento das coisas que se esperam e a prova das coisas que não se veem”. Trata-se de uma convicção que transcende a evidência visível.
+    </p>
+
+    <p>
+      A dúvida, portanto, atua contra as promessas de Cristo. Em João 14:2-3, Ele declara que preparará um lugar para aqueles que creem. Duvidar disso é questionar Sua capacidade de cumprir o que prometeu. E duvidar de Sua existência é ainda mais grave, considerando o impacto histórico de Sua vida, morte e ressurreição.
+    </p>
+
+    <p>
+      Tomé, um dos discípulos, duvidou da ressurreição. Jesus, ao aparecer-lhe, disse: “Porque me viste, creste? Bem-aventurados os que não viram e creram” (João 20:29). O agnosticismo, nesse contexto, não questiona apenas Deus, mas também a historicidade de Jesus e o impacto de Sua existência na história.
+    </p>
+
+    <p>
+      Crer em Deus exige fé. A própria narrativa bíblica — da criação ao nascimento virginal de Cristo — exige fé. Contudo, a Bíblia afirma que até os demônios creem em Deus (Tiago 2:19). Portanto, a questão não é apenas crer que Deus existe, mas responder a essa verdade.
+    </p>
+
+    <p>
+      O Evangelho não busca provar a existência de Deus, mas conduzir o homem ao arrependimento (Atos 17:30). Isso porque a existência de Deus, à luz das Escrituras e de evidências históricas, já é apresentada como uma realidade. O relacionamento com Deus não se estabelece pela lógica, mas pela fé — e a fé é a prova do que não se vê.
+    </p>
+
+  </div>
+  <button id="btnAudio" onclick="toggleAudio()">▶ Ouvir</button>
+
+  <button class="btn-voltar" onclick="voltar()">Voltar ao Sumário</button>
+
+  <script>
+    let falando = false;
+    let utterance;
+
+    function toggleAudio() {
+      const btn = document.getElementById("btnAudio");
+      const texto = document.getElementById("conteudo").innerText;
+
+      if (!falando) {
+        utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = "pt-BR";
+
+        utterance.onend = () => {
+          falando = false;
+          btn.innerText = "▶ Ouvir";
+        };
+
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utterance);
+
+        falando = true;
+        btn.innerText = "⏹ Parar";
+
+      } else {
+        speechSynthesis.cancel();
+        falando = false;
+        btn.innerText = "▶ Ouvir";
+      }
+    }
+
+    function voltar() {
+      window.location.href = "2.html";
+    }
+  </script>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>
+
+</body>
+</html>
