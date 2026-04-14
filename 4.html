@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítulo 2 - A História de Jesus</title>
+
+<style>
+  body {
+    margin: 0;
+    padding: 40px;
+    font-family: Georgia, serif;
+    background: #ffffff;
+    color: #111;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .cabecalho-capitulo {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  .numero-capitulo {
+    font-size: 120px;
+    line-height: 0.8;
+    color: #000;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .controles-acessibilidade {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    clear: both;
+  }
+
+  p {
+    text-align: justify;
+    margin-bottom: 18px;
+    white-space: pre-line; /* Mantém quebras de linha manuais se houver */
+  }
+
+  #btnAudio {
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+    width: fit-content;
+  }
+
+  #btnAudio:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  .btn-voltar {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .enabled {
+    z-index: 999999 !important;
+  }
+</style>
+</head>
+
+<body>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <div class="capitulo">
+    <div class="cabecalho-capitulo">
+      <div class="numero-capitulo">2</div>
+      <div class="controles-acessibilidade">
+        <button id="btnAudio" onclick="toggleAudio()">
+          <span id="iconAudio">▶</span> <span id="textAudio">Ouvir Capítulo</span>
+        </button>
+      </div>
+    </div>
+
+    <h1 id="titulo-cap">Você Pode não Crer no Jesus da História, <br>Mas, não Pode Negar a História de Jesus</h1>
+
+    <div id="conteudo">
+<p>Entre os historiadores é praticamente consenso que Jesus foi um personagem real. Sem evidências arqueológicas, sua existência pode ser comprovada em antigos relatos não ligados ao cristianismo.Para a maior parte dos historiadores contemporâneos, a existência de um homem chamado Jesus, que viveu há cerca de 2 mil anos na região da Galileia, ficou conhecido por suas pregações e acabou executado pelo poder romano, é tida como verdade. E isto não é uma questão de fé — até porque essas pesquisas se limitam a buscar evidências daquilo que é história e não do mito criado depois em torno da figura deste ser humano (https://www.terra.com.br/diversao/o-que-prova-que-jesus-existiu,5b6127e410ccf2e087b54bc12ff31d5bfk6an4pa.html?utm_source=clipboard)</p>
+
+<p>"Jesus fazia parte de um campo socioeconômico de pessoas simples e comuns, subalternos que viviam no limite da sobrevivência. A arqueologia não tem condições de identificar [vestígios de] pessoas comuns e anônimas, de mapeá-las. E nem por isso elas deixaram de existir", pontua o historiador André Leonardo Chevitarese., professor na Universidade Federal do Rio de Janeiro (UFRJ) e autor de, entre outros, Jesus Histórico: Uma Brevíssima Introdução.
+
+"Precisamos lembrar que Jesus não era um personagem importante no tempo em que ele viveu, então não esperamos encontrar um monumento feito para ele em sua época", exemplifica o historiador Alex Fernandes Bohrer, professor do Instituto Federal de Minas Gerais (IFMG) e autor do livro Jesus: Um Breve Roteiro Histórico Para Curiosos.
+
+Aquele homem pobre, de origem camponesa, provavelmente analfabeto, monoglota no aramaico, que passou a maior parte da vida numa minúscula cidade — Nazaré — localizada na periferia do império romano, até arrebanhou alguns seguidores. Contudo, sua relevância só ganharia corpo tempos depois de sua morte, quando seus seguidores — e os seguidores desses seguidores — acabariam fazendo uma religião do seu legado.
+
+Relíquias supostamente ligadas à crucificação e morte dele, como a coroa de espinhos guardada na Catedral de Notre-Dame, em Paris, e o tecido de linho que teria envolvido seu cadáver, conhecido como Santo Sudário e exposto na Catedral de Turim, na Itália, não têm autenticidade comprovada por pesquisas científicas — há suspeitas de que seriam peças forjadas ao longo da Idade Média. 
+Historiadores antigos
+
+Para os estudiosos, contudo, a existência do Jesus histórico se comprova por textos de historiadores antigos que o citam e evidências arqueológicas indiretas que confirmam o contexto descrito em passagens bíblicas sobre ele.
+
+Autor da obra Marginal Jew: Rethinking the Historical Jesus, o padre e biblista John Paulo Meier (1942-2022) entendia ser importante buscar referências extrabíblicas sobre o Jesus histórico, já que "as evidências bíblicas são tendenciosas, encapsuladas em um texto teológico escrito por crentes comprometidos".
+
+O nome de Jesus aparece entre autores romanos e judaicos. O historiador romano Cornélio Tácito (56 d.C. - 118 d.C.), que notoriamente desprezava os cristãos, mencionou-o em seu relato sobre o famoso incêndio de Roma ocorrido no ano de 64. No texto, ele diz que o imperador Nero (37-68), para "acabar com o boato" de que teria sido ele o mandante do ato, "substituiu como culpados e puniu das formas mais incomuns aqueles odiados por seus atos vergonhosos, a quem a multidão chamava de cristãos". "O fundador deste nome, Cristo, havia sido executado no reinado de Tibério pelo procurador Pôncio Pilatos", escreve Tácito.
+
+"Tácito, como autores clássicos em geral, não revela as fontes que usou. Mas isso não deve diminuir nossa confiança em suas afirmações", avalia o historiador Lawrence Mykytiuk, professor na Universidade de Purdue, nos Estados Unidos, em artigo publicado em 2015. Em sua avaliação, Tácito "estava entre os melhores historiadores de Roma" e "nunca era dado a escrever descuidadamente".
+Outro autor comumente citado é Flávio Josefo (37 d.C. - 100 d.C.), historiador judaico-romano. Ele menciona Jesus duas vezes em sua obra Antiguidades Judaicas. O livro A Guerra dos Judeus também cita o personagem em algumas versões, mas não há consenso se tais trechos são autênticos ou interpolações posteriores de autores cristãos.
+
+Em Antiguidades Judaicas, há uma menção incidental quando ele está identificando Tiago, líder da igreja em Jerusalém — o autor o define como "irmão de Jesus que é chamado Messias". Mykytiuk comenta que ao usar Jesus para identificar claramente "Tiago, o assunto da discussão", o historiador acaba deixando claro que Jesus havia sido "uma pessoa real".
+
+O outro trecho, mais longo, é envolto em polêmica. Porque a versão que se conhece traz algumas colocações claramente cristãs, sugerindo que houve deturpações ao longo dos séculos. Contudo, pela análise textual comparativa com outros escritos de Josefo e a comparação com uma tradução árabe descoberta no século 20, a maior parte dos historiadores concorda que parte do texto é autêntica — ou seja: sobre um relato não religioso acerca da figura histórica, cristãos acrescentaram elementos teológicos.
+
+Assim, extrai-se que "por volta dessa época vivia Jesus, um homem sábio", "um mestre de pessoas" que "conquistou muitos judeus e muitos gregos". Diz ainda que morreu crucificado, mas que "a tribo dos cristãos, assim chamada após ele, não está extinta até hoje".
+
+Outros historiadores abordaram Jesus. Por exemplo, Plínio, o Jovem (61 d.C. - 114 d.C.), que registrou a existência de uma adoração primitiva a ele.
+
+Na época, ninguém contestou sua existência
+
+Há ainda evidências documentais indiretas da existência de Jesus. O teólogo Robert Van Voorst, autor de Jesus Outside The New Testament: An Introduction to the Ancient Evidence olha para os documentos produzidos por rabinos da época para afirmar que "nenhum judeu [daquele período] que se opôs ao cristianismo negou ou questionou a historicidade de Jesus".
+
+Em seu livro, ele lembra que "se alguém no mundo no mundo antigo tinha uma razão para não gostar da fé cristã, eram os rabinos". Portanto, "argumentar que Jesus nunca existiu, mas foi uma criação dos primeiros cristãos, teria sido a polêmica mais eficaz contra o cristianismo". "Todas as fontes judaicas trataram Jesus como uma pessoa totalmente histórica. Os rabinos usaram os eventos reais da vida de Jesus contra ele", aponta Van Voorst.
+
+Na arqueologia, são evidências indiretas que também atestariam, no entendimento de pesquisadores, a existência do Jesus real. "De uma figura sem muita expressividade no primeiro século, que era importante apenas para aqueles que o conheciam, não esperamos encontrar vestígios diretos. Mas há os indiretos", diz Bohrer. "Que, somados e colocados num prisma histórico, permitem tecer um panorama geral."
+Ele cita túmulos "de pessoas ligadas à história de Jesus", como o ossário de Caifás, descoberto em 1990 e que pode ser do sumo-sacerdote de mesmo nome — embora não haja consenso entre os pesquisadores. E também do anel atribuído ao governador romano Pôncio Pilatos, descoberto em 1968 e analisado em 2018. "Existe uma série de elementos que demonstram que aquele contexto existiu", comenta o historiador.
+
+A cidadezinha de Jesus
+
+Chevitarese lembra de outro trabalho recente, o realizado pelo arqueólogo Ken Dark, professor do King's College, de Londres, e autor do livro Archaelogy of Jesus' Nazareth. Ao longo de 14 anos, Dark realizou um extenso trabalho arqueológico em busca dos resquícios da cidade de Nazaré dos tempos de Jesus — inclusive para provar que o povoado existia naquela época.
+
+"Ele constatou, do ponto de vista estratigráfico, que Nazaré existia desde a segunda metade do século 2º antes da Era Comum", pontua Chevitarese. Na análise do arqueólogo, a cidade onde Jesus morou era paupérrima e tinha de 300 a 500 habitantes.
+
+"Portanto, a arqueologia demonstra, do ponto de vista de um cenário histórico, que é plenamente coerente a existência de Nazaré, de Jesus e de tantos outros camponeses daquela primeira metade do primeiro século", conclui o professor da UFRJ.
+
+Até mesmo ateus confessos como Leandro Karnal, apontam para a existência de Jesus (https://www.instagram.com/reel/DBNH8e6uSkH/), bem como, Luiz Felipe Pondé, que diz no video do endereço a seguir,  que é: "mais razoável crer nas narrações dos Evangelhos, que falam dos lugares e das culturas da época de ajesus, do que afirmar crer de que Jesus é uma idéia inventada" (https://m.youtube.com/watch?v=HEwDx__BUus). 
+Os manuscritos romanos que podem conter evidências da crucificação de Jesus
+A obra "Anais" de Tácito estão entre as mais importantes fontes históricas não cristãs que mencionam a crucificação de Jesus Cristo
+Redação Publicado em 06/04/2025, às 11h00
+
+"Cristo na cruz", por Jules Elie Delaunay (1881), e estátua de Tácito - Getty Images; Wikimedia Commons via Domínio Público
+  
+Os "Anais" de Tácito estão entre as mais importantes fontes históricas não cristãs que mencionam a crucificação de Jesus Cristo e a perseguição aos seus seguidores no Império Romano.
+Tácito, cujo nome completo era Públio Cornélio Tácito, viveu entre aproximadamente 56 d.C. e 120 d.C. e se baseou em registros oficiais, atas do Senado e relatos diretos para compilar sua obra, conhecida por sua perspectiva crítica — e por vezes cínico — da política romana, não poupando críticas a imperadores corruptos e tirânicos.
+PUBLICIDADE
+Escrito por volta de 116 d.C., os "Anais" fornecem um relato detalhado da repressão promovida pelo imperador Nero contra os cristãos, especialmente após o Grande Incêndio de Roma, em 64 d.C. 
+Esse evento devastador, que destruiu grande parte da cidade, alimentou suspeitas de que o próprio imperador fosse o responsável. Para desviar as acusações, o ele teria escolhido os cristãos como bode expiatório, submetendo-os a torturas e execuções públicas — entre elas, crucificações, fogueiras e ataques por feras no Coliseu.
+Segundo Tácito, "Nero atribuiu a culpa e infligiu as mais requintadas torturas a uma classe odiada por suas abominações, chamados cristãos pelo povo". O historiador ainda descreve cenas em que os presos eram crucificados em jardins suntuosos, transformados em espetáculo no circo.
+Em outro trecho, ele narra como o imperador se disfarçava de cocheiro, misturando-se ao povo, como se assistisse, encantado, aos jogos cruéis que se desenrolavam.
+ Busto de Tácito numa gravura de 1829 e final do livro 11 e começo do livro 12 de "Anais" / Crédito: Wikimedia Commons via Domínio Público
+Crucificação
+De acordo com a narrativa bíblica, há 2.025 anos nasceu um menino chamado Jesus em uma cidade pouco conhecida nos limites do Império Romano, vindo a ser executado aos 33 anos. Embora a maioria dos estudiosos concorde que ele foi uma figura histórica real, há intensos debates quanto a sua divindade.
+PUBLICIDADE
+Seus ensinamentos sobre amor e perdão, somados à sua morte violenta, inspiraram seus seguidores a consolidar uma nova fé que evoluiria para o cristianismo. No Livro 15 dos "Anais", Tácito menciona que os cristãos derivaram seu nome de "Cristo", que fora condenado à morte por ordem de Pôncio Pilatos durante o governo de Tibério. 
+"Christus, de quem o nome se originou, sofreu a pena máxima durante o reinado de Tibério, nas mãos de um de nossos procuradores, Pôncio Pilatos", diz o trecho. No caso, "Christus", a versão latina de "Cristo", significa "o Ungido" ou "o Messias" e tem origem na palavra hebraica Mashiach (Messias).
+Diferente dos relatos bíblicos, que abordam a crucificação sob uma perspectiva teológica, o testemunho de Tácito se insere no contexto da administração romana e da política imperial, reforçando a historicidade do evento. 
+O Mundo Acadêmico tem entre seus mais ilustres intelectuais, homens que não apenas afirmavam cer em Deus, como também, reprovavam o ateismo, inclusive os maiores vultos da ciência não apenas eram Teístas, como diziam ser impossível um Universo sem Um Criador.  A Matemática é a linguagem a qual Deus escreveu o universo” é uma frase do cientista Galileu Galilei (1564-1642).27 de jan. de 2025  Aristóteles, por força da razão, reconheceu a existência de Deus, tendo em vista o fato de haver finalidade (direcionalidade) e movimento (transformações) na natureza.20 de jul. de 2016 - para Aristóteles, Deus, não apenas é o Criador, mas, o motor do universo. Deus não pode ser resultado de alguma ação, não pode ser escravo de amo algum. Em Pitágoras, uma das vozes mais ressonantes da matemática se lê: Pitágoras é um deus atemporal e perfeito, que se manifesta na existência por meio dos números, que por sua vez são também perfeitos e atemporais.
+Segue a Lista com nomes de grandes vultos da ciência que acreditavam em Deus:
+
+Cientistas Famosos que Criam em Deus
+por
+
+1. Nicolau Copérnico (1473-1543)
+Copérnico foi o astrônomo polonês que propôs o primeiro sistema de planetas matematicamente baseado ao redor do sol. Ele lecionou em várias universidades européias, e tornou-se um cônego da igreja Católica em 1497. Seu novo sistema foi apresentado realmente pela primeira vez nos jardins do Vaticano, em 1533, ao Papa Clemente VII, que o aprovou, e Copérnico foi encorajado a publicá-lo sem demoras. Copérnico nunca esteve sob qualquer ameaça de perseguição religiosa - e ele foi encorajado a publicar a sua obra tanto pelo Bispo Católico Guise, como também pelo Cardeal Schonberg e pelo Professor Protestante George Rheticus. Copérnico se referia às vezes a Deus em suas obras, e não via seu sistema como em conflito com a Bíblia.
+
+2. Johannes Kepler (1571-1630)
+Kepler foi um brilhante matemático e astrônomo. Ele primeiramente trabalhou com a luz, e estabeleceu as leis do movimento planetário em torno do sol. Ele também chegou perto de atingir o concept Newtoniano da gravidade universal - bem antes de Newton nascer! Sua introdução da idéia de força na astronomia, a mudou radicalmente numa direção moderna. Kepler era um luterano extremamente sincero e piedoso, cujas obras sobre a astronomia continham escritos sobre como o espaço e os corpos celestiais representam a Trindade. Kleper não sofreu perseguição por causa de sua aberta confissão de um sistema heliocêntrico, e, deveras, foi lhe permitido, mesmo sendo um protestante, permanecer na Universidade Católica de Graz como um professor (1595-1600), quando outros protestantes tinham sido expulsos!
+
+3. Galileu Galilei (1564-1642)
+Galileu é freqüentemente lembrado por seu conflito com a Igreja Católica Romana. Sua obra controversa sobre o sistema solar foi publicada em 1663. Ela não tinha provas de um sistema solar heliocêntrico (as descobertas do telescópio de Galileu não indicavam uma terra em movimento), e sua única "prova", baseada sobre as marés, era inválida. Ela ignorou as órbitas elípticas corretas dos planetas, publicadas há vinte e cinco anos atrás, por Kepler. Visto que sua obra acabou colocando o argumento favorito do Papa na boca do tolo no diálogo, o Papa (um velho amigo de Galileu) ficou muito ofendido. Após o "teste" e, tendo sido proibido de ensinar o sistema heliocêntrico, Galileu fez sua obra teórica mais útil, que foi sobre dinâmica. Galileu disse expressamente que a Bíblia não podia errar, ele viu seu sistema relacionado ao assunto de como a Bíblia deve ser interpretada.
+
+4. René Descartes (1596-1650)
+Descartes foi um matemático, cientista e filósofo francês, que tem sido chamado o pai da filosofia moderna. Seus estudos escolares fizeram com que ele ficasse insatisfeito com a filosofia precedente: Ele tinha uma profunda fé religiosa como um Católico, que ele reteve até o dia de sua morte, junto com desejo resoluto e apaixonado de descobrir a verdade. Aos 24 anos de idade teve um sonho, e sentiu o chamado vocacional para buscar trazer o conhecimento num único sistema de pensamento. Seu sistema começou perguntando o que se pode ser conhecido, se tudo mais for duvidoso - sugerindo o famoso "Penso, logo existo". Realmente, é freqüentemente esquecido que o próximo passo para Descartes foi estabelecer a mais próxima certeza da existência de Deus - porque somente se Deus existe e não queira que sejamos enganados pelas nossas experiências, podemos confiar em nossos sentidos e processos lógicos de pensamento. Deus é, portanto, central em toda a sua filosofia. O que ele realmente queira, era ver sua filosofia adotada como padrão do ensino Católico. René Descartes e Francis Bacon (1561-1626) são geralmente considerados como as figuras-chave no desenvolvimento da metodologia científica. Ambos tinham sistemas nos quais Deus era importante, e ambos pareciam mais devotos do que o normal para a sua era.
+5. Isaac Newton (1642-1727)
+Na ótica, mecânica e matemática, Newton foi uma figura de gênio e inovação indisputável. Em toda sua ciência (incluindo a química), ele viu a matemática e os números como centrais. O que é menos conhecido é que ele foi devotamente religioso e via os números como envolvidos no entendimento do plano de Deus, na Bíblia, para a história. Ele produziu uma grande quantia de trabalho sobre numerologia bíblica, e, embora alguns aspectos de suas crenças não fossem ortodoxos, ele estimava a teologia como muito importante. Em seu sistema de física, Deus é essencial para a natureza e a perfeição do espaço. Em Principia ele declarou: "Este magnífico sistema do sol, planetas e cometas, poderia proceder somente do conselho e domínio de um Ser inteligente e poderoso. E, se as estrelas fixas são os centros de outros sistemas similares, estes, sendo formados pelo mesmo conselho sábio, devem estar todos sujeitos ao domínio de Alguém; especialmente visto que a luz das estrelas fixas é da mesma natureza que a luz do sol e que a luz passa de cada sistema para todos os outros sistemas: e para que os sistemas das estrelas fixas não caiam, devido à sua gravidade, uns sobre os outros, Ele colocou esses sistemas a imensas distâncias entre si.".
+
+6. Robert Boyle (1791-1867)
+Um dos fundadores e um dos primeiros membro-chave da Sociedade Real, Boyle deu seu nome à "Lei de Boyle" para os gases, e também escreveu uma obra importante sobre química. A Enciclopédia Britânica diz dele: "Por sua vontade ele doou uma série de leituras, ou sermões, que ainda continuam, para defender a religião Cristã contra os infiéis notórios...Como um Protestante devoto, Boyle teve um interesse especial na promoção da religião Cristã no exterior, dando dinheiro para traduzir e publicar o Novo Testamento para o irlandês e turco. Em 1690, ele desenvolveu suas visões teológicas no The Christian Virtuoso (O Cristão Virtuoso), que ele escreveu para mostrar que o estudo da natureza era um dever religioso central". Boyle escreveu contra os ateus em seus dias (a noção de que o ateísmo é uma invenção moderna é um mito), e foi claramente um Cristão muito mais devoto do que a maioria em sua época.
+
+7. Michael Faraday (1791-1867)
+O filho de um ferreiro que se tornou um dos maiores cientistas do século XIX. Sua obra sobre a eletricidade e magnetismo não somente revolucionou a física, mas conduziu à muitas coisas que fazem parte do nosso estilo de vida hoje, as quais dependem dela (incluindo computadores, linhas de telefone e web sites). Faraday foi um Cristão devoto, membro do Sandemanianismo [Nota do tradutor: seita cristã fundada em aproximadamente 1730, na Escócia, por John Glas (1695-1773), um ministro presbiteriano da Igreja da Escócia, juntamente com o seu genro, Robert Sanderman, de quem é derivado o nome da seita], o que significativamente o influenciou e fortemente afetou a maneira na qual ele se aproximou e interpretou a natureza. Os Sandemanianos se originaram dos presbiterianos que rejeitaram a idéia de igrejas estatais, e tentaram voltar ao tipo de Cristianismo do Novo Testamento.
+
+8. Gregor Mendel (1822-1884)
+Mendel foi o primeiro a lançar os fundamentos matemáticos da genética, o qual veio a ser chamado "Mendelianismo". Ele começou sua pesquisa em 1856 (três anos antes de Darwin publicou sua Origens das Espécies) no jardim do Monastério no qual ele era um monge. Mendel foi eleito Abade de seu Monastério em 1868. Sua obra permaneceu comparativamente desconhecida até a virada do século, quando uma nova geração de botânicos começaram a achar resultados similares e a "redescobri-lo" (embora suas idéias não fossem idênticas às suas). Um ponto interessante é que 1860 foi a década da formação do X-Clube, dedicado à diminuição das influências religiosas e propagação de uma imagem de "conflito" entre ciência e religião. Um simpatizante foi Francis Galton, primo de Darwin, cujo interesse científico estava na genética (um proponente da eugenia - aperfeiçoamento da raça humana para "melhorar" o estoque). Ele estava escrevendo sobre como a "mente sacerdotal" não era propícia à ciência, enquanto que, quase ao mesmo tempo, um monge australiano estava dando um santo inovador na genética. A redescoberta da obra de Mendel veio tarde demais para afetar a contribuição de Galton.
+
+9. Kelvin (William Thompson) (1824-1907)
+Kelvin foi o primeiro dentre um pequeno grupo de cientistas britânicos que ajudaram a lançar os fundamentos da física moderna. Sua obra cobriu várias áreas da física, e é dito ele ter mais cartas com o seu nome do que qualquer outra pessoa na Comunidade Britânica, visto que ele recebeu numerosos graus de honorários das Universidades Européias, que reconheceram o valor de sua obra. Ele foi um Cristão muito comprometido, certamente mais religioso que a maioria de sua época. Interessantemente, seus companheiros físicos, George Gabriel Stokes (1819-1903) e James Clerk Maxwell (1831-1879), foram também homens de profundo comprometimento Cristão, numa era quando muitos eram Cristãos nominais e apáticos, ou simplesmente anti-Cristãos. A Enciclopédia Britânica diz: "Maxwell é considerado por muitos dos físicos modernos como o cientista do século XIX que teve a maior influência sobre os físicos do século XX; ele é posto ao lado de Sir Isaac Newton e Albert Einstein, por causa da natureza fundamental de suas contribuições". Lord Kelvin foi um criacionista da Terra antiga, que estimava a idade da Terra como sendo algo entre 20 milhões e 100 milhões de anos, com um limite máximo de 500 milhões, baseado nas taxas refrescantes.
+
+10. Max Planck (1858-1947)
+Planck fez muitas contribuições para a física, mas é mais conhecido pela teoria quantum, a qual tem revolucionado nosso entendimento dos mundos atômicos e sub-atômicos. Em sua palestra "Religião e Ciência Natural", Planck expressou a visão de que Deus está presente em todos os lugares, e sustentou que "a santidade da Deidade inteligível é transmitida pela santidade de símbolos". Os ateus, ele pensava, dão muita atenção ao que são meramente símbolos. Planck foi um representante da igreja de 1920 até a sua morte, e cria num Deus todo-poderoso, onisciente e beneficente (embora não necessariamente um Deus pessoal). Tanto a ciência como a religião travaram uma "incansável batalha contra o ceticismo e dogmatismo, contra a incredulidade e a superstição", com o objetivo "direcionado para Deus!"
+
+11. Albert Einstein (1879-1955)
+Einstein é provavelmente o cientista mais conhecido e mais altamente reverenciado do século XX, e está associado com as maiores revoluções em nosso pensamento sobre tempo, gravidade e a conversão de matéria em energia (E=mc2). Embora nunca tenha chegado a crer num Deus pessoal, ele reconheceu a impossibilidade de um universo não-criado. A Enciclopédia Britânica diz dele: 'Firmemente negando o ateísmo, Einstein expressou uma crença no "Deus de Espinoza, que se revela na harmonia do que existe'". Isto realmente motivou seu interesse na ciência, como ele certa vez afirmou a um jovem físico: "Eu não sei como Deus criou este mundo, eu não estou interessado neste ou naquele fenômeno, no espectro deste ou daquele elemento. Eu quero conhecer os Seus pensamentos, o resto são detalhes". O famoso epíteto de Einsten sobre o "princípio da incerteza" era que "Deus não joga dados" - e para ele esta foi uma real declaração sobre um Deus em quem ele cria. Uma das suas afirmações famosas é: "Ciência sem religião é coxa, religião sem ciência é cega".
+
+Que a Historicidade da Existência de Jesus não pode ser negada ou ignorada é fato, tanto arqueológico, quanto antropológico e histórico. Mas, a grande problemática estaciona-se justamente nessa questã: já que as evidências históricas declaram a Existência de Jesus e o impacto de suas ideologias sobre o mundo, tanto o mundo Oriental, quanto o Ocidental, então, resta todo ser humano posicionar-se ante essa verdade, e daí, preciso dar voz a Lewi, que fez o argumento que explora a ideia de que Jesus não pode ser considerado apenas um "grande mestre moral", pois suas próprias declarações sobre si mesmo exigem uma de três conclusões: ou ele era um mentiroso, um lunático, ou de fato, o Filho de Deus.  e C.S.Lewis (C. S. Lewis (1898-1963) faz essa observação com maestria: O "trilema de Lewis", popularizado por C.S. Lewis, afirma que, se Jesus não disse a verdade sobre ser Deus, então ele seria um lunático ou um mentiroso, não apenas um grande mestre moral. Essa ideia argumenta que as palavras e ações de Jesus, conforme registradas nos Evangelhos, não deixam espaço para a possibilidade de ele ser simplesmente um líder moral inspirador sem ser divino. 
+O argumento de Lewis, também conhecido como "Louco, Mau ou Deus", coloca três alternativas para quem aceita os relatos sobre Jesus: 
+• 1. Louco:
+Se Jesus não era Deus, mas afirmava ser, e estava enganado sobre isso, então ele seria um lunático, sofrendo de delírios de grandeza.
+• 2. Mau:
+Se Jesus sabia que não era Deus, mas ainda assim afirmava ser, então ele seria um mentiroso, um enganador, e não alguém digno de seguir ou imitar.
+• 3. Senhor:
+A terceira opção é que Jesus realmente era quem dizia ser: Deus encarnado. Nesse caso, suas palavras e ações seriam autênticas e dignas de fé e adoração.
+Lewis enfatiza que a escolha não é entre um grande mestre moral e um Deus, mas entre um Deus e alguém que está enganando ou delirando. Ele argumenta que a própria natureza das reivindicações de Jesus, bem como o impacto que elas tiveram no mundo, impossibilitam a ideia de que ele foi apenas um mestre moral (C.S. Lewis em seu livro Cristianismo Puro e Simples). 
+Essa afirmação de Lewis, levanta questões ambíguas a respeito de Jesus, mas, não apenas isso, pois, tais questões, forçam um Conceito prevalecente do que se pensa de Jesus: Se ELLE é um louco ou mentiroso, deve ser ignorado ou esquecido, mas, se ELE é DEUS (e ELE É!) então, deve ser Adorado, Temido e Obedecido.</p>
+    </div>
+  </div>
+
+  <button class="btn-voltar" onclick="voltar()">← Sumário</button>
+
+<script>
+  let falando = false;
+  let synth = window.speechSynthesis;
+  let frases = [];
+  let indiceFrase = 0;
+
+  function toggleAudio() {
+    const btnText = document.getElementById("textAudio");
+    const btnIcon = document.getElementById("iconAudio");
+
+    if (!falando) {
+      const titulo = document.getElementById("titulo-cap").innerText;
+      const textocorpo = document.getElementById("conteudo").innerText;
+      
+      // Divide o texto longo em frases para evitar falhas no navegador
+      frases = (titulo + ". " + textocorpo).match(/[^.!?]+[.!?]+/g) || [titulo + ". " + textocorpo];
+      indiceFrase = 0;
+      falando = true;
+      btnText.innerText = "Parar Leitura";
+      btnIcon.innerText = "⏹";
+      falarProximaFrase();
+    } else {
+      pararTudo();
+    }
+  }
+
+  function falarProximaFrase() {
+    if (indiceFrase < frases.length && falando) {
+      let utterance = new SpeechSynthesisUtterance(frases[indiceFrase]);
+      utterance.lang = "pt-BR";
+      utterance.rate = 1.1;
+
+      utterance.onend = () => {
+        indiceFrase++;
+        falarProximaFrase();
+      };
+
+      utterance.onerror = () => pararTudo();
+
+      synth.speak(utterance);
+    } else {
+      pararTudo();
+    }
+  }
+
+  function pararTudo() {
+    synth.cancel();
+    falando = false;
+    document.getElementById("textAudio").innerText = "Ouvir Capítulo";
+    document.getElementById("iconAudio").innerText = "▶";
+  }
+
+  function voltar() { window.location.href = "index.html"; }
+  window.onbeforeunload = () => synth.cancel();
+</script>
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+  <div vw class="enabled" style="left: initial !important; right: 0 !important; top: 50% !important; transform: translateY(-50%) !important;">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+</body>
+</html>
