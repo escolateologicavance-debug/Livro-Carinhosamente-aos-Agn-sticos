@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre o Autor - Meu Amigo Anjo</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #1a1a1a; /* Fundo escuro para destacar o texto */
+        color: #e0e0e0;
+        font-family: 'Roboto', sans-serif;
+        overflow: hidden; /* Evita barra de rolagem lateral durante a animação */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Container da animação de rolagem */
+    .scroll-container {
+        position: relative;
+        width: 80%;
+        max-width: 800px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .scroll-content {
+        position: absolute;
+        width: 100%;
+        top: 100%; /* Começa fora da tela, embaixo */
+        text-align: center;
+        animation: subir 25s linear forwards; /* Tempo da rolagem */
+    }
+
+    @keyframes subir {
+        0% { top: 100%; }
+        100% { top: -120%; } /* Sobe até sumir no topo */
+    }
+
+    h1 {
+        font-size: 3rem;
+        color: #ffd700; /* Dourado */
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+
+    .destaque {
+        color: #ffd700;
+        font-weight: 700;
+    }
+
+    .link-avance {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px 30px;
+        background: #ffd700;
+        color: #1a1a1a;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .link-avance:hover {
+        background: #fff;
+        transform: scale(1.1);
+    }
+
+    .assinatura {
+        margin-top: 100px;
+        font-style: italic;
+        color: #888;
+    }
+
+    .controles-audio {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+        background: rgba(255,255,255,0.1);
+        padding: 10px;
+        border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+<audio id="musicaFundo" loop autoplay>
+    <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+</audio>
+
+<div class="controles-audio">
+    <button onclick="document.getElementById('musicaFundo').muted = !document.getElementById('musicaFundo').muted" style="cursor:pointer; background:none; border:1px solid #fff; color:#fff; border-radius:5px; padding:5px 10px;">
+        Mudar Áudio (Mute)
+    </button>
+</div>
+
+<div class="scroll-container">
+    <div class="scroll-content">
+        <h1>Sobre o Autor</h1>
+
+        <p>Casado com <span class="destaque">Sirlei</span>, com quem tem seu maior tesouro na Terra; <br>
+        <span class="destaque">Thabita, Rebeca Saron e Reuell</span>.</p>
+
+        <p>Tem orgulho e alegria por seu genro <span class="destaque">Audrey Otávio</span> e seu futuro genro <span class="destaque">Jean</span>.</p>
+
+        <p>Serve a <span class="destaque">Jesus</span> desde o ano 1999.</p>
+
+        <p>É Fundador da <span class="destaque">Escola Teológica AVANCE</span>, desenvolvedor de mais de 20 Aplicativos voltados para o Ensino da Palavra, Gestão Emocional e Desenvolvimento Ministerial.</p>
+
+        <p>Seus Aplicativos tanto de cursos quanto de Seminários e Quiz Bíblicos podem ser adquiridos na Prateleira Digital da AVANCE:</p>
+        
+        <a href="https://escolateologicavance-debug.github.io/Talmid-Yvrit---Hebraico-m.2/prateleira.html" class="link-avance" target="_blank">
+            Prateleira Digital AVANCE
+        </a>
+
+        <p>Escreveu alguns livros Eclesiásticos e se dedica assiduamente à Difusão da Palavra de Deus.</p>
+
+        <div class="assinatura">
+            <p>Paz à Israel!<br>Paz as almas!</p>
+        </div>
+        
+        <p style="margin-top: 50px;">
+            <a href="index.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #fff;">Voltar ao Início</a>
+        </p>
+    </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    
+    // Tenta tocar o áudio automaticamente (alguns navegadores exigem interação)
+    window.addEventListener('click', () => {
+        const audio = document.getElementById('musicaFundo');
+        audio.play();
+    }, { once: true });
+</script>
+
+</body>
+</html>
