@@ -6,17 +6,30 @@
 <title>Capítulo 2 - A História de Jesus</title>
 
 <style>
-  body {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
     margin: 0;
-    padding: 40px;
+    padding: 0;
+  }
+
+  body {
+    padding: 20px; /* Margem interna confortável, sem exagero */
     font-family: Georgia, serif;
     background: #ffffff;
     color: #111;
     line-height: 1.8;
-    max-width: 900px;
-    margin: auto;
+    box-sizing: border-box; /* Fundamental: impede que o padding empurre o texto pra fora */
   }
 
+  /* Ajuste para telas menores (Celulares) */
+  @media (max-width: 600px) {
+    body {
+      padding: 15px; /* Deixa o texto aproveitar mais a tela no celular */
+    }
+  }
+
+  /* Mantém o seu botão de áudio e outras classes */
   .cabecalho-capitulo {
     display: flex;
     align-items: flex-start;
@@ -25,51 +38,32 @@
   }
 
   .numero-capitulo {
-    font-size: 120px;
+    font-size: 80px; /* Reduzi um pouco para não quebrar a linha no celular */
     line-height: 0.8;
     color: #000;
     font-weight: bold;
     margin: 0;
   }
 
-  .controles-acessibilidade {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
   h1 {
-    font-size: 28px;
+    font-size: 24px;
     margin-top: 0;
     margin-bottom: 20px;
-    clear: both;
   }
 
   p {
     text-align: justify;
     margin-bottom: 18px;
-    white-space: pre-line; /* Mantém quebras de linha manuais se houver */
   }
 
   #btnAudio {
     padding: 10px 20px;
     border: 2px solid #000;
-    border-radius: 5px;
-    background: #fff;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: all 0.3s;
-    width: fit-content;
-  }
-
-  #btnAudio:hover {
     background: #000;
     color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
   }
 
   .btn-voltar {
@@ -80,12 +74,7 @@
     background: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
     z-index: 100;
-  }
-
-  .enabled {
-    z-index: 999999 !important;
   }
 </style>
 </head>
@@ -112,13 +101,13 @@
     <h1 id="titulo-cap">Você Pode não Crer no Jesus da História, <br>Mas, não Pode Negar a História de Jesus</h1>
 
     <div id="conteudo">
-<p>Entre os historiadores é praticamente consenso que Jesus foi um personagem real. Sem evidências arqueológicas, sua existência pode ser comprovada em antigos relatos não ligados ao cristianismo.Para a maior parte dos historiadores contemporâneos, a existência de um homem chamado Jesus, que viveu há cerca de 2 mil anos na região da Galileia, ficou conhecido por suas pregações e acabou executado pelo poder romano, é tida como verdade. E isto não é uma questão de fé — até porque essas pesquisas se limitam a buscar evidências daquilo que é história e não do mito criado depois em torno da figura deste ser humano (https://www.terra.com.br/diversao/o-que-prova-que-jesus-existiu,5b6127e410ccf2e087b54bc12ff31d5bfk6an4pa.html?utm_source=clipboard)</p>
+<p>Entre os historiadores é praticamente consenso que Jesus foi um personagem real. Sem evidências arqueológicas, sua existência pode ser comprovada em antigos relatos não ligados ao cristianismo.Para a maior parte dos historiadores contemporâneos, a existência de um homem chamado Jesus, que viveu há cerca de 2 mil anos na região da Galileia, ficou conhecido por suas pregações e acabou executado pelo poder romano, é tida como verdade. E isto não é uma questão de fé — até porque essas pesquisas se limitam a buscar evidências daquilo que é história e não do mito criado depois em torno da figura deste ser humano. <a href="https://www.terra.com.br/diversao/o-que-prova-que-jesus-existiu,5b6127e410ccf2e087b54bc12ff31d5bfk6an4pa.html" target="_blank" style="text-decoration: none; color: inherit;"><h1 id="titulo-cap">O que prova que Jesus existiu?   《Clique</h1></a></p>
 
-<p>"Jesus fazia parte de um campo socioeconômico de pessoas simples e comuns, subalternos que viviam no limite da sobrevivência. A arqueologia não tem condições de identificar [vestígios de] pessoas comuns e anônimas, de mapeá-las. E nem por isso elas deixaram de existir", pontua o historiador André Leonardo Chevitarese., professor na Universidade Federal do Rio de Janeiro (UFRJ) e autor de, entre outros, Jesus Histórico: Uma Brevíssima Introdução.
+<p> Jesus fazia parte de um campo socioeconômico de pessoas simples e comuns, subalternos que viviam no limite da sobrevivência. A arqueologia não tem condições de identificar [vestígios de] pessoas comuns e anônimas, de mapeá-las. E nem por isso elas deixaram de existir", pontua o historiador André Leonardo Chevitarese., professor na Universidade Federal do Rio de Janeiro (UFRJ) e autor de, entre outros, Jesus Histórico: Uma Brevíssima Introdução.
 
 "Precisamos lembrar que Jesus não era um personagem importante no tempo em que ele viveu, então não esperamos encontrar um monumento feito para ele em sua época", exemplifica o historiador Alex Fernandes Bohrer, professor do Instituto Federal de Minas Gerais (IFMG) e autor do livro Jesus: Um Breve Roteiro Histórico Para Curiosos.
 
-Aquele homem pobre, de origem camponesa, que passou a maior parte da vida numa minúscula cidade — Nazaré — localizada na periferia do império romano, até arrebanhou alguns seguidores. Contudo, sua relevância só ganharia corpo tempos depois de sua morte, quando seus seguidores — e os seguidores desses seguidores — acabariam fazendo uma religião do seu legado.
+Aquele homem pobre, de origem camponesa, provavelmente analfabeto, monoglota no aramaico, que passou a maior parte da vida numa minúscula cidade — Nazaré — localizada na periferia do império romano, até arrebanhou alguns seguidores. Contudo, sua relevância só ganharia corpo tempos depois de sua morte, quando seus seguidores — e os seguidores desses seguidores — acabariam fazendo uma religião do seu legado.
 
 Relíquias supostamente ligadas à crucificação e morte dele, como a coroa de espinhos guardada na Catedral de Notre-Dame, em Paris, e o tecido de linho que teria envolvido seu cadáver, conhecido como Santo Sudário e exposto na Catedral de Turim, na Itália, não têm autenticidade comprovada por pesquisas científicas — há suspeitas de que seriam peças forjadas ao longo da Idade Média. 
 Historiadores antigos
@@ -231,79 +220,86 @@ Essa afirmação de Lewis, levanta questões ambíguas a respeito de Jesus, mas,
 
   <button class="btn-voltar" onclick="voltar()">← Sumário</button>
 
-<script>
-  let falando = false;
-  let synth = window.speechSynthesis;
-  let frases = [];
-  let indiceFrase = 0;
+  <script>
+    let falando = false;
+    let synth = window.speechSynthesis;
+    let frases = [];
+    let indiceFrase = 0;
 
-  function toggleAudio() {
-    const btnText = document.getElementById("textAudio");
-    const btnIcon = document.getElementById("iconAudio");
+    function toggleAudio() {
+      const btnText = document.getElementById("textAudio");
+      const btnIcon = document.getElementById("iconAudio");
 
-    if (!falando) {
-      const titulo = document.getElementById("titulo-cap").innerText;
-      const textocorpo = document.getElementById("conteudo").innerText;
-      
-      // Divide o texto longo em frases para evitar falhas no navegador
-      frases = (titulo + ". " + textocorpo).match(/[^.!?]+[.!?]+/g) || [titulo + ". " + textocorpo];
-      indiceFrase = 0;
-      falando = true;
-      btnText.innerText = "Parar Leitura";
-      btnIcon.innerText = "⏹";
-      falarProximaFrase();
-    } else {
-      pararTudo();
-    }
-  }
-
-  function falarProximaFrase() {
-    if (indiceFrase < frases.length && falando) {
-      let utterance = new SpeechSynthesisUtterance(frases[indiceFrase]);
-      utterance.lang = "pt-BR";
-      utterance.rate = 1.1;
-
-      utterance.onend = () => {
-        indiceFrase++;
+      if (!falando) {
+        const titulo = document.getElementById("titulo-cap").innerText;
+        const textocorpo = document.getElementById("conteudo").innerText;
+        
+        // Divide o texto para o narrador não travar
+        frases = (titulo + ". " + textocorpo).match(/[^.!?]+[.!?]+/g) || [titulo + ". " + textocorpo];
+        indiceFrase = 0;
+        falando = true;
+        btnText.innerText = "Parar Leitura";
+        btnIcon.innerText = "⏹";
         falarProximaFrase();
-      };
-
-      utterance.onerror = () => pararTudo();
-
-      synth.speak(utterance);
-    } else {
-      pararTudo();
+      } else {
+        pararTudo();
+      }
     }
-  }
 
-  function pararTudo() {
-    synth.cancel();
-    falando = false;
-    document.getElementById("textAudio").innerText = "Ouvir Capítulo";
-    document.getElementById("iconAudio").innerText = "▶";
-  }
+    function falarProximaFrase() {
+      if (indiceFrase < frases.length && falando) {
+        let utterance = new SpeechSynthesisUtterance(frases[indiceFrase]);
+        utterance.lang = "pt-BR";
+        utterance.rate = 1.1;
+        utterance.onend = () => { indiceFrase++; falarProximaFrase(); };
+        utterance.onerror = () => pararTudo();
+        synth.speak(utterance);
+      } else {
+        pararTudo();
+      }
+    }
 
-  function voltar() { window.location.href = "index.html"; }
-  window.onbeforeunload = () => synth.cancel();
-</script>
-<div vw class="enabled">
-  <div vw-access-button class="active"></div>
-  <div vw-plugin-wrapper>
-    <div class="vw-plugin-top-wrapper"></div>
-  </div>
-</div>
+    function pararTudo() {
+      synth.cancel();
+      falando = false;
+      document.getElementById("textAudio").innerText = "Ouvir Capítulo";
+      document.getElementById("iconAudio").innerText = "▶";
+    }
+
+    // Volta para o arquivo do Sumário
+    function voltar() {
+      window.location.href = "2.html";
+    }
+
+    window.onbeforeunload = () => synth.cancel();
+  </script>
 
   <div vw class="enabled" style="left: initial !important; right: 0 !important; top: 50% !important; transform: translateY(-50%) !important;">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
     </div>
-  </div>
+</div>
 
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+
+    function falar() {
+        const texto = document.querySelector('.container').innerText;
+        const msg = new SpeechSynthesisUtterance(texto);
+        msg.lang = 'pt-BR';
+        msg.rate = 0.9; 
+        window.speechSynthesis.speak(msg);
+    }
+    function parar() {
+        window.speechSynthesis.cancel();
+    }
+</script>
 
 </body>
 </html>
