@@ -1,161 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sobre o Autor</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Capítulo 5</title>
+
+  <style>
+    /* PADRÃO BLINDADO: Trava de tela e margens */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
     body {
-        margin: 0;
-        padding: 0;
-        background: #1a1a1a; /* Fundo escuro para destacar o texto */
-        color: #e0e0e0;
-        font-family: 'Roboto', sans-serif;
-        overflow: hidden; /* Evita barra de rolagem lateral durante a animação */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-
-    /* Container da animação de rolagem */
-    .scroll-container {
-        position: relative;
-        width: 80%;
-        max-width: 800px;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    .scroll-content {
-        position: absolute;
-        width: 100%;
-        top: 100%; /* Começa fora da tela, embaixo */
-        text-align: center;
-        animation: subir 25s linear forwards; /* Tempo da rolagem */
-    }
-
-    @keyframes subir {
-        0% { top: 100%; }
-        100% { top: -120%; } /* Sobe até sumir no topo */
+      padding: 20px;
+      font-family: Georgia, serif;
+      background: #ffffff;
+      color: #111;
+      line-height: 1.8;
+      box-sizing: border-box;
     }
 
     h1 {
-        font-size: 3rem;
-        color: #ffd700; /* Dourado */
-        margin-bottom: 50px;
-        text-transform: uppercase;
-        letter-spacing: 5px;
+      font-size: 22px;
+      margin-bottom: 30px;
+      font-weight: normal;
+    }
+
+    .capitulo-numero {
+      float: left;
+      font-size: 120px;
+      line-height: 0.8;
+      font-weight: bold;
+      margin-right: 15px;
+      color: #ccc;
     }
 
     p {
-        font-size: 1.4rem;
-        line-height: 1.8;
-        margin-bottom: 30px;
-        font-weight: 300;
+      margin-bottom: 18px;
+      text-align: justify;
     }
 
-    .destaque {
-        color: #ffd700;
-        font-weight: 700;
+    #btnAudio {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 30px;
+      background: #111;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    .link-avance {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 15px 30px;
-        background: #ffd700;
-        color: #1a1a1a;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: bold;
-        transition: 0.3s;
+    .btn-voltar {
+      display: block;
+      margin: 40px auto;
+      padding: 12px 20px;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
     }
-
-    .link-avance:hover {
-        background: #fff;
-        transform: scale(1.1);
-    }
-
-    .assinatura {
-        margin-top: 100px;
-        font-style: italic;
-        color: #888;
-    }
-
-    .controles-audio {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 100;
-        background: rgba(255,255,255,0.1);
-        padding: 10px;
-        border-radius: 10px;
-    }
-</style>
+  </style>
 </head>
+
 <body>
 
-<div vw class="enabled">
+  <h1 id="titulo-cap">E se hoje te pedirem a tua alma?</h1>
+
+  <div id="conteudo">
+    <p>
+      <span class="capitulo-numero">5</span>
+      A inquietante pergunta que ecoa através dos séculos foi proferida por Jesus na parábola do rico insensato: "Louco, esta noite te pedirão a tua alma; e o que tens preparado, para quem será?" (Lucas 12:20). Esta não é apenas uma reflexão sobre a brevidade da vida, mas um confronto direto com a ilusão de controle que muitos, inclusive ateus e agnósticos, sustentam diante da finitude humana.
+    </p>
+
+    <p>
+      O agnosticismo frequentemente se ampara na ideia de que, como não se "pode saber", é melhor focar apenas no agora, no material e no tangível. Contudo, a advertência de Cristo revela que o acúmulo de bens, o conforto intelectual e a negação do transcendente não oferecem proteção alguma quando o prazo da existência se encerra. O "louco" da parábola não era necessariamente alguém desprovido de inteligência lógica, mas sim alguém que falhou na contabilidade eterna.
+    </p>
+
+    <p>
+      Se hoje fosse o seu último suspiro, o que restaria de suas certezas ou de suas dúvidas? A alma, essa essência que transcende o biológico e que a Bíblia afirma pertencer a Deus, não pode ser barganhada. Quando Jesus pergunta "para quem será o que tens preparado?", Ele aponta para a esterilidade de uma vida vivida apenas para si mesmo ou para conceitos que perecem com o tempo.
+    </p>
+
+    <p>
+      Para o cristão, a resposta a essa pergunta é o que define a paz interior. Não se trata de medo da morte, mas de prontidão espiritual. A prontidão de quem sabe que a alma não é um fardo pesado, mas um tesouro que deve ser entregue às mãos do Criador através de um relacionamento estabelecido em vida.
+    </p>
+
+    <p>
+      Não deixe para buscar a sabedoria quando o tempo se esgotar. A dúvida pode ser um escudo confortável por algum tempo, mas ela não é um destino. A eternidade não espera que resolvamos todos os nossos dilemas intelectuais; ela exige que tomemos uma decisão sobre a verdade que nos foi apresentada. Afinal, a quem pertence o sopro que ainda existe em você agora?
+    </p>
+  </div>
+
+  <button id="btnAudio" onclick="toggleAudio()">▶ Ouvir</button>
+
+  <button class="btn-voltar" onclick="voltar()">Conhecer o Autor</button>
+
+  <script>
+    let falando = false;
+    let synth = window.speechSynthesis;
+    let frases = [];
+    let indiceFrase = 0;
+
+    function toggleAudio() {
+      const btn = document.getElementById("btnAudio");
+      if (!falando) {
+        const titulo = document.getElementById("titulo-cap").innerText;
+        const textoCorpo = document.getElementById("conteudo").innerText;
+        frases = (titulo + ". " + textoCorpo).match(/[^.!?]+[.!?]+/g) || [titulo + ". " + textoCorpo];
+        indiceFrase = 0;
+        falando = true;
+        btn.innerText = "⏹ Parar";
+        falarProximaFrase();
+      } else {
+        pararTudo();
+      }
+    }
+
+    function falarProximaFrase() {
+      if (indiceFrase < frases.length && falando) {
+        let utterance = new SpeechSynthesisUtterance(frases[indiceFrase].trim());
+        utterance.lang = "pt-BR";
+        utterance.rate = 1.1;
+        utterance.onend = () => { indiceFrase++; falarProximaFrase(); };
+        utterance.onerror = () => pararTudo();
+        synth.speak(utterance);
+      } else {
+        pararTudo();
+      }
+    }
+
+    function pararTudo() {
+      synth.cancel();
+      falando = false;
+      document.getElementById("btnAudio").innerText = "▶ Ouvir";
+    }
+
+    function voltar() {
+      // Apontando para o arquivo do autor como solicitado
+      window.location.href = "8.html";
+    }
+
+    window.onbeforeunload = () => synth.cancel();
+  </script>
+
+  <div vw class="enabled" style="left: initial !important; right: 0 !important; top: 50% !important; transform: translateY(-50%) !important;">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
-</div>
-
-<audio id="musicaFundo" loop autoplay>
-    <source src="musica.mp3" type="audio/mpeg">
-    Seu navegador não suporta áudio.
-</audio>
-
-<div class="controles-audio">
-    <button onclick="document.getElementById('musicaFundo').muted = !document.getElementById('musicaFundo').muted" style="cursor:pointer; background:none; border:1px solid #fff; color:#fff; border-radius:5px; padding:5px 10px;">
-        Mudar Áudio (Mute)
-    </button>
-</div>
-
-<div class="scroll-container">
-    <div class="scroll-content">
-        <h1>Sobre o Autor</h1>
-
-        <p>Casado com <span class="destaque">Sirlei</span>, com quem tem seu maior tesouro na Terra; <br>
-        <span class="destaque">Thabita, Rebeca Saron e Reuell</span>.</p>
-
-        <p>Tem orgulho e alegria por seu genro <span class="destaque">Audrey Otávio</span> e seu futuro genro <span class="destaque">Jean</span>.</p>
-
-        <p>Serve a <span class="destaque">Jesus</span> desde o ano 1999.</p>
-
-        <p>É Fundador da <span class="destaque">Escola Teológica AVANCE</span>, desenvolvedor de mais de 20 Aplicativos voltados para o Ensino da Palavra, Gestão Emocional e Desenvolvimento Ministerial.</p>
-
-        <p>Seus Aplicativos tanto de cursos quanto de Seminários e Quiz Bíblicos podem ser adquiridos na Prateleira Digital da AVANCE:</p>
-        
-        <a href="https://escolateologicavance-debug.github.io/Talmid-Yvrit---Hebraico-m.2/prateleira.html" class="link-avance" target="_blank">
-            Prateleira Digital AVANCE
-        </a>
-
-        <p>Escreveu alguns livros Eclesiásticos e se dedica assiduamente à Difusão da Palavra de Deus.</p>
-
-        <div class="assinatura">
-            <p>Paz à Israel!<br>Paz as almas!</p>
-        </div>
-        
-        <p style="margin-top: 50px;">
-            <a href="index.html" style="color: #fff; text-decoration: none; border-bottom: 1px solid #fff;">Voltar ao Início</a>
-        </p>
-    </div>
-</div>
-
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-    
-    // Tenta tocar o áudio automaticamente (alguns navegadores exigem interação)
-    window.addEventListener('click', () => {
-        const audio = document.getElementById('musicaFundo');
-        audio.play();
-    }, { once: true });
-</script>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app', { defaultWidget: 'closed' });
+  </script>
 
 </body>
 </html>
