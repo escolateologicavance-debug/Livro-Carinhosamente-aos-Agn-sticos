@@ -137,9 +137,12 @@
     function toggleAudio() {
       const btn = document.getElementById("btnAudio");
       if (!falando) {
-        const titulo = document.getElementById("titulo-cap").innerText;
-        const textoCorpo = document.getElementById("conteudo").innerText;
-        frases = (titulo + ". " + textoCorpo).match(/[^.!?]+[.!?]+/g) || [titulo + ". " + textoCorpo];
+        const titulo = document.getElementById("titulo-cap") ? document.getElementById("titulo-cap").innerText : "";
+        const textoCorpo = document.getElementById("conteudo") ? document.getElementById("conteudo").innerText : "";
+        
+        const textoCompleto = titulo + ". " + textoCorpo;
+        frases = textoCompleto.match(/[^.!?]+[.!?]+/g) || [textoCompleto];
+        
         indiceFrase = 0;
         falando = true;
         btn.innerText = "⏹ Parar";
@@ -154,7 +157,10 @@
         let utterance = new SpeechSynthesisUtterance(frases[indiceFrase].trim());
         utterance.lang = "pt-BR";
         utterance.rate = 1.1;
-        utterance.onend = () => { indiceFrase++; falarProximaFrase(); };
+        utterance.onend = () => { 
+          indiceFrase++; 
+          falarProximaFrase(); 
+        };
         utterance.onerror = () => pararTudo();
         synth.speak(utterance);
       } else {
@@ -165,17 +171,18 @@
     function pararTudo() {
       synth.cancel();
       falando = false;
-      document.getElementById("btnAudio").innerText = "▶ Ouvir";
+      const btn = document.getElementById("btnAudio");
+      if (btn) btn.innerText = "▶ Ouvir";
     }
 
-        function voltar() {
+    function voltar() {
       window.location.href = "7.html";
-    }
-
     }
 
     window.onbeforeunload = () => synth.cancel();
   </script>
+
+  <button id="btnAudio" onclick="toggleAudio()" style="cursor:pointer; padding: 10px; margin: 10px;">▶ Ouvir</button>
 
   <div vw class="enabled" style="left: initial !important; right: 0 !important; top: 50% !important; transform: translateY(-50%) !important;">
     <div vw-access-button class="active"></div>
@@ -185,7 +192,7 @@
   </div>
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app', { defaultWidget: 'closed' });
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
 </body>
